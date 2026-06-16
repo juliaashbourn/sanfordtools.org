@@ -1,128 +1,276 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HUNANIMA - Machines Agricoles Simples</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #2e7d32; /* Vert foncé */
-      color: #fdd835; /* Jaune vif */
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2em;
-    }
-    nav {
-      background-color: #fdd835;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-    .hero {
-      background: url('https://i.pinimg.com/550x/a9/df/51/a9df5172829f8c05f5b92f97553d41ae.jpg') no-repeat center center/cover;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-      font-size: 2em;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    section h2 {
-      color: #2e7d32;
-      margin-bottom: 20px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .gallery img {
-      width: 280px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    footer {
-      background-color: #2e7d32;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANFORD TOOLS, LLC | Structural Hardware & Material Nodes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #191b1f; color: #f5f5f5; font-family: 'Courier Prime', monospace; overflow-x: hidden; }
+        .font-heavy-syne { font-family: 'Syne', sans-serif; font-weight: 800; }
+        
+        /* 2026 Burnt Foundry Orange Theme */
+        .text-foundry-orange { color: #ff5a00; }
+        .bg-foundry-orange { background-color: #ff5a00; }
+        .border-foundry-orange { border-color: #ff5a00; }
+        
+        /* Industrial Raw Mesh Mesh Underlay */
+        .industrial-mesh {
+            background-image: radial-gradient(rgba(255, 90, 0, 0.03) 2px, transparent 2px);
+            background-size: 32px 32px;
+        }
+        
+        /* Absolute New Kinetic Scroll Actions */
+        .reveal { transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1); opacity: 0; transform: scale(0.95) translateY(50px); }
+        .reveal.active { opacity: 1; transform: scale(1) translateY(0); }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #191b1f; }
+        ::-webkit-scrollbar-thumb { background: #ff5a00; }
+
+        /* Custom Asymmetric Button Concept */
+        .btn-foundry {
+            border: 1px solid #ff5a00;
+            padding: 16px 32px;
+            position: relative;
+            background: transparent;
+            transition: color 0.4s ease;
+        }
+        .btn-foundry::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #ff5a00;
+            z-index: -1; transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-foundry:hover { color: #191b1f; }
+        .btn-foundry:hover::before { width: 100%; }
+    </style>
 </head>
-<body>
+<body class="antialiased industrial-mesh">
 
-  <header>
-    <h1>HUNANIMA</h1>
-    <p>Machines Agricoles Simples et Fiables</p>
-  </header>
+    <!-- NEW 2026 ENTÊTE: Left-Docked Vertical Heavy Badge (Totally Redesigned) -->
+    <header class="fixed top-6 left-6 z-50 pointer-events-none">
+        <div class="bg-black text-white p-6 border-l-4 border-foundry-orange pointer-events-auto shadow-2xl flex flex-col gap-4">
+            <div class="font-heavy-syne text-2xl md:text-3xl tracking-tighter uppercase leading-none">
+                S<span class="text-foundry-orange">.</span>TOOLS
+            </div>
+            <div class="h-[1px] w-12 bg-white/20"></div>
+            <div class="flex flex-col gap-2 text-[10px] uppercase tracking-widest font-bold text-white/50">
+                <a href="#materials-grid" class="hover:text-foundry-orange transition-colors duration-300">// 01_STOCKS</a>
+                <a href="#corporate-node" class="hover:text-foundry-orange transition-colors duration-300">// 02_LEDGER</a>
+                <a href="#terminal-gate" class="hover:text-foundry-orange transition-colors duration-300">// 03_INTAKE</a>
+            </div>
+        </div>
+    </header>
 
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <p>Votre partenaire pour des machines agricoles durables</p>
-  </div>
-
-  <section id="about">
-    <h2>À propos de nous</h2>
-    <p>
-      Chez <strong>HUNANIMA</strong>, nous nous spécialisons dans la fabrication et la distribution de 
-      <strong>machines agricoles simples</strong> pour faciliter le travail des agriculteurs. 
-      Nos solutions combinent <em>durabilité, efficacité et innovation</em> afin de répondre aux besoins de toutes les exploitations.
-    </p>
-  </section>
-
-  <section id="gallery">
-    <h2>Nos Machines</h2>
-    <div class="gallery">
-      <img src="http://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2014/11/22234423/Boaz-Mini-Combine-jpg.jpg" alt="Mini moissonneuse">
-      <img src="https://krs-agro.ru/products/zagotovka_kormov/elho/19/7.jpg" alt="Machine agricole">
-      <img src="https://img.mod-network.net/files/images/6218ac69d37fb/SimpleFarmSilov1000_6222.jpg" alt="Équipement agricole simple">
+    <!-- Right Corner Active Node Counter -->
+    <div class="fixed top-6 right-6 z-50 bg-white/5 backdrop-blur-md px-4 py-2 border border-white/10 hidden md:block">
+        <p class="text-[10px] uppercase font-bold tracking-widest text-foundry-orange">// NETWORK NODE INDEX: 2026.06</p>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p><strong>Email :</strong> admin@tyusex.shop</p>
-    <p><strong>Téléphone :</strong> +33 7 38 50 26 36</p>
-    <p><strong>Adresse :</strong> Avenue Baratier, Montmorency, 95160, France</p>
-  </section>
+    <!-- Stage 1: Industrial Foundry Entrance Block (Hero Component) -->
+    <section class="min-h-screen flex items-center relative px-6 md:pl-48 md:pr-16 z-10 pt-32">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center w-full">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 bg-foundry-orange/10 border border-foundry-orange/30 px-3 py-1 mb-8">
+                    <span class="font-bold text-[10px] tracking-wider text-foundry-orange uppercase">// RAW HARDWARE FULFILLMENT SYSTEMS</span>
+                </div>
+                <h1 class="text-5xl md:text-8xl font-heavy-syne text-white leading-[0.9] uppercase tracking-tight mb-8">
+                    HEAVY UTILITY <br><span class="text-foundry-orange">HARDWARE</span> & <br>MATERIAL MATRIX.
+                </h1>
+                <p class="text-white/60 text-base md:text-lg max-w-xl leading-relaxed mb-12 font-light">
+                    Sanford Tools, LLC architecture handles extreme-durability supply lines. We deliver wholesale building aggregates, premium specialized hand tools, and rugged outdoor estate structural elements.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 relative z-20">
+                    <a href="#materials-grid" class="btn-foundry font-bold text-xs tracking-widest uppercase text-center block z-10">
+                        Scan Material Reserves ↓
+                    </a>
+                    <a href="tel:14343873712" class="bg-white/5 text-white border border-white/10 font-bold text-xs px-8 py-5 hover:bg-white hover:text-black transition duration-300 text-center flex items-center justify-center gap-2">
+                        +1 (434) 387-3712
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Dynamic Industrial High Contrast Art Piece -->
+            <div class="lg:col-span-5 relative h-[50vh] lg:h-[70vh] w-full p-2 border border-white/10 bg-black/40">
+                <div class="w-full h-full relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581092162384-8987c1796715?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-75 contrast-125 saturate-50 hover:saturate-100 transition duration-700" alt="Heavy Metal Castings and Forged Tools Matrix">
+                </div>
+                <div class="absolute bottom-4 left-4 font-mono text-[9px] bg-black text-foundry-orange px-3 py-1 uppercase font-bold tracking-widest border border-foundry-orange">// STAGE_UNIT_2026</div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 HUNANIMA - Tous droits réservés.</p>
-  </footer>
+    <!-- Stage 2: Verified Corporate Hub Disclosures (Deep Scroll 1) -->
+    <section id="corporate-node" class="py-48 px-6 md:pl-48 md:pr-16 bg-black/40 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-4 reveal">
+                <span class="text-foundry-orange font-bold tracking-widest text-xs block mb-3">// RECORD IDENTIFIER RETRIEVED</span>
+                <h2 class="text-3xl md:text-5xl font-heavy-syne text-white uppercase tracking-tight">
+                    AUTHENTICATED REGISTRY
+                </h2>
+            </div>
+            <div class="lg:col-span-8 reveal text-white/70 text-base md:text-lg space-y-6 leading-relaxed font-light">
+                <p>
+                    Corroborated officially by institutional trading directory listings secured within **Screenshot 2026-06-16 214605.jpg**, Sanford Tools, LLC operates under active commercial statutes as an approved distributor of building materials, heavy equipment components, and professional trade hardware systems.
+                </p>
+                <p>
+                    The enterprise administers high-volume industrial processing, bulk contractor logistics, and infrastructure distribution from its recorded domestic station:
+                </p>
+                <div class="p-8 border-l-2 border-foundry-orange bg-white/[0.02] max-w-3xl mt-10">
+                    <p class="text-white/30 text-[9px] uppercase tracking-wider mb-2">// PHYSICAL DISPATCH JUNCTION TERMINAL:</p>
+                    <p class="text-lg md:text-2xl font-heavy-syne tracking-tight text-white uppercase">25785 S Beavercreek Rd Beavercreek, OR, 97004-8636, United States</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Stage 3: Extreme Photographic Density Matrix Layout (Deep Scroll 2) -->
+    <section id="materials-grid" class="py-48 px-6 md:pl-48 md:pr-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-32 text-left reveal">
+                <span class="text-foundry-orange uppercase tracking-widest text-xs block mb-2">// SYSTEM ARCHIVE LOGS</span>
+                <h2 class="text-4xl md:text-7xl font-heavy-syne text-white uppercase tracking-tight">THE DEPOT CHANNELS</h2>
+                <p class="text-white/40 max-w-md mt-4 font-light">A profound physical sequence mapping heavy industrial commodities, mechanical trade gear, and structural installation components.</p>
+            </div>
+
+            <!-- Massive 4-Photo Showcase Grid with Heavy Industrial Borders -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Infrastructure Card 1 -->
+                <div class="reveal flex flex-col justify-between group border-t-2 border-white/10 pt-6">
+                    <div class="overflow-hidden mb-6 h-[520px] bg-black/20 border border-white/5 relative">
+                        <img src="https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale contrast-125 brightness-90 group-hover:grayscale-0 transition duration-500" alt="Raw Heavy Structural Building Materials Allocation">
+                    </div>
+                    <div>
+                        <span class="text-foundry-orange text-xs block mb-1">01 // STRUCTURAL FREIGHT</span>
+                        <h3 class="text-xl font-heavy-syne text-white uppercase tracking-tight">Building Material Lines</h3>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Card 2 -->
+                <div class="reveal flex flex-col justify-between group border-t-2 border-white/10 pt-6 md:translate-y-12">
+                    <div class="overflow-hidden mb-6 h-[520px] bg-black/20 border border-white/5 relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale contrast-125 brightness-90 group-hover:grayscale-0 transition duration-500" alt="Professional Hand Tools and Forged Hardware Components">
+                    </div>
+                    <div>
+                        <span class="text-white text-xs block mb-1">02 // PRECISION MECHANICS</span>
+                        <h3 class="text-xl font-heavy-syne text-white uppercase tracking-tight">Heavy Tool Dealerships</h3>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Card 3 -->
+                <div class="reveal flex flex-col justify-between group border-t-2 border-white/10 pt-6 lg:translate-y-6">
+                    <div class="overflow-hidden mb-6 h-[520px] bg-black/20 border border-white/5 relative">
+                        <img src="https://images.unsplash.com/photo-1416339698674-4f118da3388d?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale contrast-125 brightness-90 group-hover:grayscale-0 transition duration-500" alt="Wholesale Outdoor Landscapes and Garden Equipment Units">
+                    </div>
+                    <div>
+                        <span class="text-foundry-orange text-xs block mb-1">03 // LANDSCAPE INFRASTRUCTURE</span>
+                        <h3 class="text-xl font-heavy-syne text-white uppercase tracking-tight">Garden Supplies Matrix</h3>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Card 4 -->
+                <div class="reveal flex flex-col justify-between group border-t-2 border-white/10 pt-6 lg:translate-y-16">
+                    <div class="overflow-hidden mb-6 h-[520px] bg-black/20 border border-white/5 relative">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615fd?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale contrast-125 brightness-90 group-hover:grayscale-0 transition duration-500" alt="Bulk Wholesale Hardware Stock and Retail Arrays">
+                    </div>
+                    <div>
+                        <span class="text-white text-xs block mb-1">04 // SUPPLY CONDUIT</span>
+                        <h3 class="text-xl font-heavy-syne text-white uppercase tracking-tight">Retail Hardware Stores</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 4: Monolithic Raw Metal Block (Deep Scroll 3) -->
+    <section class="py-44 bg-white text-black w-full my-32">
+        <div class="max-w-5xl mx-auto px-6 md:pl-48 reveal text-left">
+            <span class="text-black/40 text-xs tracking-widest block mb-4">// STRUCTURAL ENDURANCE SYSTEM</span>
+            <h3 class="text-3xl md:text-6xl font-heavy-syne uppercase tracking-tight leading-none">
+                "ENGINEERED COMPONENT SCALING ARCHITECTED FOR ABSOLUTE RESILIENCE ACROSS ALL HEAVY LOGISTICS PATHWAYS."
+            </h3>
+        </div>
+    </section>
+
+    <!-- Stage 5: Secondary Density Photographic Grid (Deep Scroll 4) -->
+    <section class="py-44 px-6 md:pl-48 md:pr-16 bg-black/20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 reveal">
+                    <span class="text-foundry-orange text-xs block mb-2">// LOGISTICS AUDITING GROUP</span>
+                    <h2 class="text-3xl md:text-5xl font-heavy-syne text-white uppercase tracking-tight mb-6">INTELLIGENT TRADE NETWORKS</h2>
+                    <p class="text-white/60 leading-relaxed font-light mb-8">
+                        Our industrial networks securely bridge massive processing yards, manufacturing complexes, and local supplier depots to fulfill construction material integrity with zero tolerance for failure.
+                    </p>
+                    <div class="border-t border-foundry-orange pt-6">
+                        <span class="font-heavy-syne text-xl text-white">COMMERCIAL CHAIN SECURED</span>
+                    </div>
+                </div>
+                
+                <!-- Additional High Density Photographic Nodes -->
+                <div class="lg:col-span-7 grid grid-cols-2 gap-6">
+                    <div class="h-96 overflow-hidden border border-white/10 shadow-2xl reveal">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale contrast-125 brightness-75">
+                    </div>
+                    <div class="h-96 overflow-hidden border border-white/10 shadow-2xl reveal translate-y-8">
+                        <img src="https://images.unsplash.com/photo-1513828583835-c527ebc5003e?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover filter grayscale contrast-125 brightness-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW 2026 PIED DE PAGE: Asymmetric Brutalist Concrete Slabs (Totally Redesigned Fused Footer) -->
+    <footer id="terminal-gate" class="bg-black text-white relative z-10 border-t-2 border-foundry-orange overflow-hidden">
+        <div class="grid lg:grid-cols-12">
+            <!-- Left Massive Grid Slab -->
+            <div class="lg:col-span-8 p-12 md:p-24 bg-[#111215] border-r border-white/5 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-6xl md:text-9xl font-heavy-syne mb-16 tracking-tighter text-white">GATE.</h2>
+                    <div class="grid sm:grid-cols-2 gap-12">
+                        <div>
+                            <span class="text-white/30 text-[10px] tracking-widest block mb-2 uppercase">// ROUTING INTAKE ADDR</span>
+                            <a href="mailto:contact@sanfordtools.org" class="text-lg md:text-xl font-heavy-syne text-foundry-orange hover:text-white transition-colors break-all">contact@sanfordtools.org</a>
+                        </div>
+                        <div>
+                            <span class="text-white/30 text-[10px] tracking-widest block mb-2 uppercase">// LIVE COM INTERFACE</span>
+                            <a href="tel:14343873712" class="text-lg md:text-xl font-heavy-syne text-white hover:text-foundry-orange transition-colors">+1 (434) 387-3712</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Slate Geo-Slab -->
+            <div class="lg:col-span-4 p-12 md:p-24 bg-black flex flex-col justify-end items-start lg:items-end">
+                <div class="w-full lg:text-right">
+                    <span class="text-white/30 text-[10px] tracking-widest block mb-2 uppercase">// DEPOT SITE RESIDENCE</span>
+                    <p class="text-xl font-heavy-syne text-white/80 tracking-tight uppercase leading-none">
+                        25785 S Beavercreek Rd<br>
+                        Beavercreek, OR, 97004-8636<br>
+                        United States
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Strip Line -->
+        <div class="px-12 md:px-24 py-8 bg-[#090a0c] border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] text-white/30 uppercase tracking-widest font-bold">
+            <p>&copy; SANFORD TOOLS, LLC. POWER MATRIX INSTALLED.</p>
+            <p>BEAVERCREEK HARDWARE TERMINAL // OREGON // USA</p>
+        </div>
+    </footer>
+
+    <!-- Intersection Observer Script for New Sharp Scaling Animations -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.02 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
